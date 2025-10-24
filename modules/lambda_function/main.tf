@@ -12,12 +12,12 @@ provider "aws" {
 }
 
 resource "aws_lambda_function" "lambda" {
-  function_name = var.function_name
-  runtime       = var.runtime
-  handler       = var.handler
-  role          = var.role_arn
-  filename      = "lambda_function.zip"
-  source_code_hash = filebase64sha256("lambda_function.zip")
+  function_name     = var.function_name
+  runtime           = var.runtime
+  handler           = var.handler
+  role              = var.role_arn
+  filename          = var.source_path
+  source_code_hash  = filebase64sha256(var.source_path)
 
   tags = var.tags
 }
