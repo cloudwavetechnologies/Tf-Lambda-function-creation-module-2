@@ -1,0 +1,10 @@
+function_name  = "cloudwave-dev-lambda-001"
+runtime        = "python3.9"
+handler        = "lambda_function.lambda_handler"
+role_arn       = "arn:aws:iam::093326771949:role/service-role/amazon-java-code-lambda-001-role-0w2vgpaj"
+source_path    = "modules/lambda_function/lambda_function.zip"
+tags = {
+  Environment = "dev"
+  Owner       = "manjunath"
+  Project     = "cloud-training"
+}
